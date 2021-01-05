@@ -1,3 +1,3 @@
 <div class="main">
-  <div class="title">hello {{name}}</div>
+  <div class="title">{{name}}</div>
 </div>

@@ -25,6 +25,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      title: 'CUE',
+      template: './index.html'
+    })
   ]
 }

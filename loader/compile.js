@@ -4,5 +4,8 @@ module.exports = function (source) {
   const tokens = tokenizer(source);
   const ast = parser(tokens);
   const code = generate(ast);
-  return `module.exports = ${code}`;
+  return `
+  const { _creatElement, _createText, _string, _if } = require("../packages/cue-runtime");
+  module.exports = ${code}
+  `;
 }

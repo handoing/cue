@@ -1,0 +1,21 @@
+{
+  "name": "cue",
+  "version": "1.0.0",
+  "description": "### 目标",
+  "main": "index.js",
+  "scripts": {
+    "pull:sub": "git submodule foreach git pull",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/handoing/cue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/handoing/cue/issues"
+  },
+  "homepage": "https://github.com/handoing/cue#readme"
+}

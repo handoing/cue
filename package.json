@@ -4,6 +4,8 @@
   "description": "### 目标",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve",
+    "build": "webpack",
     "pull:sub": "git submodule foreach git pull",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,5 +19,15 @@
   "bugs": {
     "url": "https://github.com/handoing/cue/issues"
   },
-  "homepage": "https://github.com/handoing/cue#readme"
+  "homepage": "https://github.com/handoing/cue#readme",
+  "dependencies": {
+    "html-webpack-plugin": "^4.5.1",
+    "webpack": "^5.11.1"
+  },
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "style-loader": "^2.0.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
+  }
 }

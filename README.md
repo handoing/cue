@@ -10,6 +10,14 @@
 
 ![](./assets/cue.png)
 
+### 运行
+
+```bash
+npm run pull:sub
+npm install
+npm start
+```
+
 ### 使用
 
 tpl:
@@ -48,13 +56,13 @@ app.mount(document.querySelector('#app'));
 compile:
 
 - [x] 模板插值
-- [ ] 模板表达式
+- [x] 模板表达式
 - [x] 模板事件
 - [ ] 模板include
 - [ ] 模板list
 - [x] 模板if
 - [ ] 过滤器
-- [ ] 指令
+- [x] 指令
 - [ ] 组件
 
 runtime:

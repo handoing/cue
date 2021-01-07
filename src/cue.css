@@ -1,3 +1,7 @@
 .main {
   color: blue;
 }
+
+.main .image:hover {
+  cursor: pointer;
+}

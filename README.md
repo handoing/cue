@@ -76,23 +76,38 @@ compile:
 - [x] 模板插值
 - [x] 模板表达式
 - [x] 模板事件
-- [ ] 模板include
-- [ ] 模板list
 - [x] 模板if
+- [ ] 模板list
+- [ ] 模板include
 - [ ] 过滤器
-- [x] 指令
+- [ ] 指令
+  - [x] c-show
+  - [x] c-hide
+  - [ ] c-class
+  - [ ] c-html
+  - [ ] c-model
+  - [ ] c-style
+  - [ ] 自定义指令
 - [ ] 组件
 
 runtime:
 
-- [ ] 生命周期
+- [x] 生命周期
   - [x] created
   - [x] updated
   - [x] mounted
-  - [ ] destroyed
+  - [x] destroyed
 - [ ] 内建api
 - [ ] 过滤器
 - [ ] 指令
+  - [x] c-show
+  - [x] c-hide
+  - [ ] c-class
+  - [ ] c-html
+  - [ ] c-model
+  - [ ] c-style
+  - [ ] 自定义指令
+- [x] 事件
 - [ ] 组件
 - [ ] 插件机制
 - [ ] 异步数据更新

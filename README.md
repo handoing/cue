@@ -32,32 +32,41 @@ npm start
 tpl:
 
 ```html
-<div class="main">
-  <p>{{name}}</p>
-  {{#if showHello}}
-    <p>hello</p>
-  {{#else}}
-    <p>yellow</p>
-  {{/if}}
+<div
+  class="main"
+>
+  <img class="image" on-click={{this.onChange($event)}} src="{{img}}"/>
+  <div class="toggle">toggle {{toggle}}</div>
+  <span class="icon"></span>
 </div>
 ```
 
 js:
 
 ```js
-const app = new Cue({
+module.exports = {
   data: {
-    name: 'gogogo',
-    showHello: true
+    toggle: true,
+    img: 'https://hao8.qhimg.com/t01c413c779df7eeecb.jpg'
   },
-  toggle() {
+  created() {
+    console.log('created');
+  },
+  updated() {
+    console.log('updated');
+  },
+  mounted() {
+    console.log('mounted');
+  },
+  destroyed() {
+    console.log('destroyed');
+  },
+  onChange(e) {
     this.setData({
-      showHello: !this.data.showHello
+      toggle: !this.data.toggle
     })
   }
-});
-
-app.mount(document.querySelector('#app'));
+};
 ```
 
 ### 进度
@@ -87,4 +96,4 @@ runtime:
 - [ ] 组件
 - [ ] 插件机制
 - [ ] 异步数据更新
-- [ ] 虚拟dom diff
+- [x] 虚拟dom diff

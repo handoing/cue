@@ -1,11 +1,23 @@
 module.exports = {
   data: {
-    name: 'gogogo',
-    showHello: true
+    toggle: true,
+    img: 'https://hao8.qhimg.com/t01c413c779df7eeecb.jpg'
   },
-  toggle() {
+  created() {
+    console.log('created');
+  },
+  updated() {
+    console.log('updated');
+  },
+  mounted() {
+    console.log('mounted');
+  },
+  destroyed() {
+    console.log('destroyed');
+  },
+  onChange(e) {
     this.setData({
-      showHello: !this.data.showHello
+      toggle: !this.data.toggle
     })
   }
 };

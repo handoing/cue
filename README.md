@@ -13,8 +13,17 @@
 ### 运行
 
 ```bash
+#初始化子模块
+git submodule init
+git submodule update
+
+#拉取子模块
 npm run pull:sub
+
+#安装依赖
 npm install
+
+#启动本地服务
 npm start
 ```
 
@@ -68,9 +77,14 @@ compile:
 runtime:
 
 - [ ] 生命周期
+  - [x] created
+  - [x] updated
+  - [x] mounted
+  - [ ] destroyed
 - [ ] 内建api
 - [ ] 过滤器
 - [ ] 指令
 - [ ] 组件
+- [ ] 插件机制
 - [ ] 异步数据更新
 - [ ] 虚拟dom diff

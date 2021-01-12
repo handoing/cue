@@ -80,6 +80,7 @@ compile:
 - [ ] 模板list
 - [ ] 模板include
 - [ ] 过滤器
+  - [ ] 自定义指令
 - [ ] 指令
   - [x] c-show
   - [x] c-hide
@@ -99,6 +100,7 @@ runtime:
   - [x] destroyed
 - [ ] 内建api
 - [ ] 过滤器
+  - [ ] 自定义指令
 - [ ] 指令
   - [x] c-show
   - [x] c-hide

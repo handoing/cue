@@ -1,12 +1,10 @@
-import { Cue } from 'cue';
+import { createApp, compile } from 'cue';
 import script from './app/cue.js';
 import render from './app/cue.tpl';
 import './app/cue.css';
 
-const vm = new Cue({
+createApp({
   script,
   render
-});
-
-vm.mount(document.querySelector('#app'));
+}).mount(document.querySelector('#app'));
 

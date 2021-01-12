@@ -4,8 +4,9 @@
   "description": "### 目标",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack",
+    "example": "npm run build && webpack serve --config example/webpack.config.js",
+    "build": "esbuild src/index.js --bundle --format=cjs --minify --outfile=./dist/index.js",
+    "init:sub": "git submodule init && git submodule update",
     "pull:sub": "git submodule foreach git pull",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/handoing/cue#readme",
   "dependencies": {
+    "esbuild": "^0.8.31",
     "html-webpack-plugin": "^4.5.1",
     "webpack": "^5.11.1"
   },

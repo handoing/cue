@@ -1,4 +1,4 @@
-const { tokenizer, parser, generate } = require("../packages/cue-parser");
+const { tokenizer, parser, generate } = require("../dist");
 
 module.exports = function (source) {
   const tokens = tokenizer(source);
@@ -13,7 +13,7 @@ module.exports = function (source) {
     _withDirectives,
     _vShow,
     _vHide
-  } = require("../packages/cue-runtime");
+  } = require("@/cue-runtime");
   module.exports = ${code}
   `;
 }

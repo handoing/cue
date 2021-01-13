@@ -2,9 +2,7 @@
 
 ### 目标
 
-渲染性能超越vue及regular。
-
-[benchmarks](https://github.com/handoing/benchmarks)
+极致的渲染性能（[benchmarks](https://github.com/handoing/benchmarks)）
 
 ### 流程图
 
@@ -14,8 +12,7 @@
 
 ```bash
 #初始化子模块
-git submodule init
-git submodule update
+npm run init:sub
 
 #拉取子模块
 npm run pull:sub
@@ -23,8 +20,8 @@ npm run pull:sub
 #安装依赖
 npm install
 
-#启动本地服务
-npm start
+#启动示例
+npm run example
 ```
 
 ### 使用
@@ -77,10 +74,10 @@ compile:
 - [x] 模板表达式
 - [x] 模板事件
 - [x] 模板if
-- [ ] 模板list
+- [x] 模板list
 - [ ] 模板include
 - [ ] 过滤器
-  - [ ] 自定义指令
+  - [ ] 自定义过滤器
 - [ ] 指令
   - [x] c-show
   - [x] c-hide
@@ -100,7 +97,7 @@ runtime:
   - [x] destroyed
 - [ ] 内建api
 - [ ] 过滤器
-  - [ ] 自定义指令
+  - [ ] 自定义过滤器
 - [ ] 指令
   - [x] c-show
   - [x] c-hide

@@ -3,5 +3,7 @@
 >
   <img class="image" on-click={{this.onChange($event)}} src="{{img}}"/>
   <div class="toggle">toggle {{toggle}}</div>
-  <span class="icon"></span>
+  {{#list nnnn as item by item_index}}
+  <p class="title">------</p>
+  {{/list}}
 </div>

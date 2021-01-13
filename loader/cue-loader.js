@@ -10,6 +10,7 @@ module.exports = function (source) {
     _createText,
     _string,
     _if,
+    _for,
     _withDirectives,
     _vShow,
     _vHide

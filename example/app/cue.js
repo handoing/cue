@@ -1,7 +1,8 @@
 module.exports = {
   data: {
     toggle: true,
-    img: 'https://hao8.qhimg.com/t01c413c779df7eeecb.jpg'
+    img: 'https://hao8.qhimg.com/t01c413c779df7eeecb.jpg',
+    nnnn: new Array(10).fill('')
   },
   created() {
     console.log('created');

@@ -1,11 +1,12 @@
-const { tokenizer, parser, generate } = require("../dist");
+const { tokenizer, parser, generate, generateSnabb } = require("../dist");
 
 module.exports = function (source) {
   const tokens = tokenizer(source);
   const ast = parser(tokens);
-  const code = generate(ast);
+  const code = generateSnabb(ast);
   return `
   const {
+    h,
     _creatElement,
     _createText,
     _string,

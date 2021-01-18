@@ -1,0 +1,24 @@
+{
+  "name": "cue-runtime",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "handoing <chenhandoing@gmail.com>",
+  "homepage": "https://github.com/handoing/cue/tree/master/packages/cue-runtime#readme",
+  "license": "ISC",
+  "main": "dist/cue-runtime.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/handoing/cue.git"
+  },
+  "scripts": {
+    "build": "esbuild index.js --bundle --format=cjs --minify --outfile=./dist/cue-runtime.js",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/handoing/cue/issues"
+  },
+  "dependencies": {
+    "esbuild": "^0.8.33",
+    "snabbdom": "^2.1.0"
+  }
+}

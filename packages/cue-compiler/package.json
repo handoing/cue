@@ -1,0 +1,23 @@
+{
+  "name": "cue-compiler",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "handoing <chenhandoing@gmail.com>",
+  "homepage": "https://github.com/handoing/cue/tree/master/packages/cue-compiler#readme",
+  "license": "ISC",
+  "main": "dist/cue-compiler.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/handoing/cue.git"
+  },
+  "scripts": {
+    "build": "esbuild index.js --bundle --format=cjs --minify --outfile=./dist/cue-compiler.js",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/handoing/cue/issues"
+  },
+  "dependencies": {
+    "esbuild": "^0.8.33"
+  }
+}

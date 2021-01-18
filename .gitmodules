@@ -1,6 +1,0 @@
-[submodule "packages/cue-parser"]
-	path = packages/cue-parser
-	url = https://github.com/handoing/cue-parser
-[submodule "packages/cue-runtime"]
-	path = packages/cue-runtime
-	url = https://github.com/handoing/cue-runtime

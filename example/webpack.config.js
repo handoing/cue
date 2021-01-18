@@ -23,8 +23,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '../packages'),
-      'cue': path.resolve(__dirname, '../dist')
+      'cue': path.resolve(__dirname, '../')
     }
   },
   plugins: [

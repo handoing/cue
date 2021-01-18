@@ -6,7 +6,7 @@
   "scripts": {
     "example": "npm run build && webpack serve --config example/webpack.config.js",
     "build": "esbuild ./index.js --bundle --format=cjs --minify --outfile=./dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,14 +20,15 @@
   },
   "homepage": "https://github.com/handoing/cue#readme",
   "dependencies": {
-    "esbuild": "^0.8.31",
-    "html-webpack-plugin": "^4.5.1",
-    "webpack": "^5.11.1"
+    "esbuild": "^0.8.31"
   },
   "devDependencies": {
     "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.1",
+    "jest": "^26.6.3",
     "lerna": "^3.22.1",
     "style-loader": "^2.0.0",
+    "webpack": "^5.15.0",
     "webpack-cli": "^4.3.1",
     "webpack-dev-server": "^3.11.1"
   }

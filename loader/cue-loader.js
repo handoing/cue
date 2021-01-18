@@ -1,11 +1,11 @@
-const { tokenizer, parser, generate, generateSnabb } = require("../dist");
+const { tokenizer, parser, generate, generateSnabb } = require("../packages/cue-compiler");
 
 module.exports = function (source) {
   const tokens = tokenizer(source);
   const ast = parser(tokens);
   const code = generateSnabb(ast);
   return `
-  const {
+  import {
     h,
     _creatElement,
     _createText,
@@ -15,7 +15,7 @@ module.exports = function (source) {
     _withDirectives,
     _vShow,
     _vHide
-  } = require("@/cue-runtime");
-  module.exports = ${code}
+  } from 'cue';
+  export default ${code};
   `;
 }

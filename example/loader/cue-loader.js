@@ -1,4 +1,4 @@
-const { tokenizer, parser, generate, generateSnabb } = require("../packages/cue-compiler");
+const { tokenizer, parser, generate, generateSnabb } = require("../../packages/cue-compiler");
 
 module.exports = function (source) {
   const tokens = tokenizer(source);

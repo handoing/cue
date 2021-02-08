@@ -18,21 +18,21 @@ function parser(tokens) {
           name: token.value,
           attrs: token.attrs,
           directives: token.directives,
-          children: []
-        })
+          children: [],
+        });
         break;
       case TokenType.CHARACTER_TOKEN:
         const prevNode = stack[stack.length - 1];
         if (prevNode) {
           prevNode.children.push({
             type: 'text',
-            data: token.value
+            data: token.value,
           });
         } else {
           list.push({
             type: 'text',
-            data: token.value
-          })
+            data: token.value,
+          });
         }
         break;
       case TokenType.END_TAG_TOKEN:
@@ -41,17 +41,17 @@ function parser(tokens) {
         if (node) {
           node.children.push(childNode);
         } else {
-          list.push(childNode)
+          list.push(childNode);
         }
         break;
       case TokenType.EXP_START_IF_TOKEN:
         stack.push({
           type: 'if',
-          expression: token.value
-        })
+          expression: token.value,
+        });
         stack.push({
-          children: []
-        })
+          children: [],
+        });
         break;
       case TokenType.EXP_THEN_IF_TOKEN:
         childNode = stack.pop();
@@ -61,8 +61,8 @@ function parser(tokens) {
         }
 
         stack.push({
-          children: []
-        })
+          children: [],
+        });
         break;
       case TokenType.EXP_END_IF_TOKEN:
         childNode = stack.pop();
@@ -76,15 +76,15 @@ function parser(tokens) {
         if (node) {
           node.children.push(childNode);
         } else {
-          list.push(childNode)
+          list.push(childNode);
         }
         break;
       case TokenType.EXP_START_FOR_TOKEN:
         stack.push({
           type: 'for',
           expression: token.value,
-          children: []
-        })
+          children: [],
+        });
         break;
       case TokenType.EXP_END_FOR_TOKEN:
         childNode = stack.pop();
@@ -92,7 +92,7 @@ function parser(tokens) {
         if (node) {
           node.children.push(childNode);
         } else {
-          list.push(childNode)
+          list.push(childNode);
         }
         break;
     }

@@ -8,8 +8,7 @@ function setAttribute(dom, name, value) {
       dom.style.cssText = value || '';
     } else if (value && typeof value === 'object') {
       for (let name in value) {
-        dom.style[name] =
-          typeof value[name] === 'number' ? value[name] + 'px' : value[name];
+        dom.style[name] = typeof value[name] === 'number' ? value[name] + 'px' : value[name];
       }
     }
   } else {
@@ -40,21 +39,16 @@ function each(array, fn) {
 
 function toArray(listLike) {
   if (!listLike) {
-    return []
+    return [];
   }
 
-  var list = []
+  var list = [];
 
   for (var i = 0, len = listLike.length; i < len; i++) {
-    list.push(listLike[i])
+    list.push(listLike[i]);
   }
 
-  return list
+  return list;
 }
 
-export {
-  setAttribute,
-  isString,
-  each,
-  toArray
-}
+export { setAttribute, isString, each, toArray };

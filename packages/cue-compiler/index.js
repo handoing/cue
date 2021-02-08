@@ -12,4 +12,4 @@ function compile(template) {
   return dynamicFunction();
 }
 
-export { tokenizer, parser, generate, generateSnabb, compile }
+export { tokenizer, parser, generate, generateSnabb, compile };

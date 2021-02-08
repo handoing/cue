@@ -5,8 +5,8 @@ export function _creatElement(tag, attrs, children) {
   return {
     tag,
     attrs,
-    children
-  }
+    children,
+  };
 }
 
 export function _createVNode(vm, attrs, handle) {
@@ -14,11 +14,11 @@ export function _createVNode(vm, attrs, handle) {
 }
 
 export function _createText(text) {
-  return text
+  return text;
 }
 
 export function _string(text) {
-  return text
+  return text;
 }
 
 export function _if(check, f1, f2) {
@@ -26,18 +26,18 @@ export function _if(check, f1, f2) {
 }
 
 export function _for(list, handle) {
-  return list.reduce(function(total, item, index) {
-    return total.concat(handle(item, index))
+  return list.reduce(function (total, item, index) {
+    return total.concat(handle(item, index));
   }, []);
 }
 
 export function _withDirectives(vNode, directives) {
-  directives.map(([ directive, directiveValue ]) => {
+  directives.map(([directive, directiveValue]) => {
     if (!isString(directive)) {
-      return directive(vNode, directiveValue)
+      return directive(vNode, directiveValue);
     }
     return;
-  })
+  });
   return vNode;
 }
 
@@ -49,6 +49,4 @@ export function _vHide(vNode, value) {
   // vNode.attrs.style = `display: ${value === 'true' ? 'none' : 'block'};`
 }
 
-export {
-  h
-};
+export { h };

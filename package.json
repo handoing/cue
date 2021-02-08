@@ -1,32 +1,31 @@
 {
-  "name": "cue",
-  "version": "1.0.0",
-  "description": "mvvm框架",
-  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "example": "npm run build && webpack serve --config example/webpack.config.js",
-    "build": "esbuild ./index.js --bundle --format=cjs --minify --outfile=./dist/index.js",
-    "test": "jest"
+    "start": "webpack serve --config example/webpack.config.js",
+    "watch": "node scripts/watch.js",
+    "build": "node scripts/build.js",
+    "lint": "eslint --ext .js packages/*/src/** packages/*/index.js",
+    "lint:fix": "eslint --format codeframe --fix --ext .js packages/*/src/** packages/*/index.js",
+    "test": "npm run build && jest",
+    "postinstall": "lerna bootstrap"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/handoing/cue.git"
+  "engines": {
+    "node": ">=12.16.1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/handoing/cue/issues"
-  },
-  "homepage": "https://github.com/handoing/cue#readme",
-  "dependencies": {
-    "esbuild": "^0.8.31"
-  },
+  "dependencies": {},
   "devDependencies": {
     "css-loader": "^5.0.1",
+    "esbuild": "^0.8.42",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "html-webpack-plugin": "^4.5.1",
     "jest": "^26.6.3",
     "lerna": "^3.22.1",
+    "prettier": "^2.2.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.15.0",
     "webpack-cli": "^4.3.1",

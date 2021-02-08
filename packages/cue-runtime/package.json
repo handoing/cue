@@ -12,13 +12,16 @@
   },
   "scripts": {
     "build": "esbuild index.js --bundle --format=cjs --minify --outfile=./dist/cue-runtime.js",
+    "watch": "esbuild index.js --bundle --format=cjs --watch --outfile=./dist/cue-runtime.js",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/handoing/cue/issues"
   },
   "dependencies": {
-    "esbuild": "^0.8.33",
     "snabbdom": "^2.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.8.42"
   }
 }

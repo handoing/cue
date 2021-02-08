@@ -1,11 +1,14 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const cueSourcePath = path.resolve(__dirname, '../packages/cue/index.js')
+const cueBundlePath = path.resolve(__dirname, '../packages/cue')
+
 module.exports = {
   mode: 'development',
   entry: path.resolve(__dirname, './index.js'),
   devServer: {
-    port: 3333,
+    port: 3360,
     open: true
   },
   module: {
@@ -16,14 +19,14 @@ module.exports = {
       },
       {
         test: /\.tpl$/i,
-        loader: require.resolve('../loader/cue-loader.js'),
+        loader: require.resolve('./loader/cue-loader.js'),
         options: {},
       }
     ],
   },
   resolve: {
     alias: {
-      'cue': path.resolve(__dirname, '../')
+      'cue': cueSourcePath
     }
   },
   plugins: [

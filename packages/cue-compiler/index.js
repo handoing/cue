@@ -3,7 +3,13 @@ import parser from './src/parser';
 import transform from './src/transform';
 import generate from './src/generate';
 import generateSnabb from './src/generateSnabb';
-import baseParse from './src/parseChildren';
+import parse from './src/parseChildren';
+
+// function compile(template) {
+//   const ast = parse(template);
+//   transform(ast);
+//   return generate(ast);
+// }
 
 function compile(template) {
   const tokens = tokenizer(template);
@@ -13,4 +19,4 @@ function compile(template) {
   return dynamicFunction();
 }
 
-export { tokenizer, parser, generate, generateSnabb, compile, baseParse };
+export { tokenizer, parser, generate, generateSnabb, compile, parse };

@@ -153,7 +153,7 @@ function getCursor(context) {
   return { column, line, offset };
 }
 
-function baseParse(content, options) {
+function parse(content, options) {
   const context = createParserContext(content, options);
   const start = getCursor(context);
   return createRoot(parseChildren(context, TextModes.DATA, []), getSelection(context, start));
@@ -747,4 +747,4 @@ function startsWithEndTagOpen(source, tag) {
   );
 }
 
-export default baseParse;
+export default parse;

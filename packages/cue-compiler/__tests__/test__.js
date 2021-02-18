@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const { baseParse } = require("../dist/cue-compiler");
+const { parse } = require("../dist/cue-compiler");
 
-const ast = baseParse(`
+const ast = parse(`
 
 <div id="test" :class="cls">
   <span>{{ name + '1' }}</span>

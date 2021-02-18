@@ -3,5 +3,8 @@
 const cueShared = require('..');
 
 describe('cue-shared', () => {
-    it('needs tests');
+  test('module mode preamble', () => {
+    const code = 'function() {}';
+    expect(code).toMatch('function() {}')
+  })
 });

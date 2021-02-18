@@ -3,7 +3,7 @@ import parser from './src/parser';
 import transform from './src/transform';
 import generate from './src/generate';
 import generateSnabb from './src/generateSnabb';
-import parse from './src/parseChildren';
+import parse from './src/parse';
 
 // function compile(template) {
 //   const ast = parse(template);

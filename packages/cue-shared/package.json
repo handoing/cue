@@ -1,0 +1,31 @@
+{
+  "name": "cue-shared",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "handoing <chenhandoing@gmail.com>",
+  "homepage": "https://github.com/handoing/cue#readme",
+  "license": "ISC",
+  "main": "lib/cue-shared.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/handoing/cue.git"
+  },
+  "scripts": {
+    "build": "esbuild index.js --bundle --format=cjs --minify --outfile=./dist/cue-shared.js",
+    "watch": "esbuild index.js --bundle --format=cjs --watch --outfile=./dist/cue-shared.js",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/handoing/cue/issues"
+  },
+  "devDependencies": {
+    "esbuild": "^0.8.47"
+  }
+}

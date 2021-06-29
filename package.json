@@ -4,7 +4,8 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "webpack serve --config example/webpack.config.js",
+    "start": "npm run build && webpack serve --config example/webpack.config.js",
+    "example": "npm run build && webpack serve --config example/webpack.config.js",
     "watch": "node scripts/watch.js",
     "build": "node scripts/build.js",
     "lint": "eslint --format codeframe --ext .js packages/*/src/** packages/*/index.js",

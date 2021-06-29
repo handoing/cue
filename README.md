@@ -2,7 +2,7 @@
 
 ### 目标
 
-极致的渲染性能（[benchmarks](https://github.com/handoing/benchmarks)）
+轻量高性能MVVM框架（[benchmarks](https://github.com/handoing/benchmarks)）
 
 ### 流程图
 
@@ -11,17 +11,19 @@
 ### 运行
 
 ```bash
-#初始化子模块
-npm run init:sub
-
-#拉取子模块
-npm run pull:sub
-
-#安装依赖
+git clone https://github.com/handoing/cue
+cd cue/
+# 安装依赖
 npm install
 
-#启动示例
+# 启动示例
 npm run example
+
+# 项目构建
+npm run build
+
+# 测试
+npm run test
 ```
 
 ### 使用

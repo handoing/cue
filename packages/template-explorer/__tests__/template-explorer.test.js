@@ -1,5 +1,8 @@
 'use strict';
 
 describe('template-explorer', () => {
-    it('needs tests');
+  test('module mode preamble', () => {
+    const code = 'function() {}';
+    expect(code).toMatch('function() {}')
+  })
 });

@@ -13,7 +13,10 @@
     "lint:fix": "eslint --fix --ext .js packages/*/src/** packages/*/index.js",
     "test": "npm run build && jest",
     "postinstall": "lerna bootstrap",
-    "clean": "lerna clean"
+    "clean": "lerna clean",
+    "contributors:init": "all-contributors init",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "engines": {
     "node": ">=12.16.1"
@@ -26,6 +29,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "all-contributors-cli": "^6.20.0",
     "css-loader": "^5.0.1",
     "esbuild": "^0.8.42",
     "eslint": "^7.19.0",

@@ -3,15 +3,15 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-### 目标
+## Target
 
-轻量高性能MVVM框架（[benchmarks](https://github.com/handoing/benchmarks)）
+Lightweight high performance MVVM framework（[benchmarks](https://github.com/handoing/benchmarks)）
 
-### 流程图
+## Flowsheet
 
 ![](./assets/cue.png)
 
-### 运行
+## Start
 
 ```bash
 git clone https://github.com/handoing/cue
@@ -35,7 +35,7 @@ npm run build
 npm run test
 ```
 
-### 使用
+## Usage
 
 tpl:
 
@@ -77,7 +77,7 @@ module.exports = {
 };
 ```
 
-### 进度
+## Progress
 
 compile:
 
@@ -124,6 +124,7 @@ runtime:
 - [x] 虚拟dom diff
 - [ ] 异步数据更新
 - [ ] 插件机制
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):

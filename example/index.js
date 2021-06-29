@@ -6,5 +6,10 @@ import './app/cue.css';
 createApp({
   script,
   render
-}).mount(document.querySelector('#app'));
+}).mount(document.querySelector('#app-1'));
+
+createApp({
+  script,
+  render
+}).mount(document.querySelector('#app-2'));
 

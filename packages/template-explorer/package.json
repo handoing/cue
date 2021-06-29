@@ -1,0 +1,28 @@
+{
+  "name": "template-explorer",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "handoing <chenhandoing@gmail.com>",
+  "homepage": "https://github.com/handoing/cue#readme",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/handoing/cue.git"
+  },
+  "scripts": {
+    "dev:parcel": "parcel index.html",
+    "build:parcel": "parcel build index.html",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/handoing/cue/issues"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "cue-compiler": "^1.0.0",
+    "monaco-editor": "^0.25.2",
+    "pretty-js": "^0.2.2"
+  }
+}

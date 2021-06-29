@@ -17,7 +17,13 @@ cd cue/
 npm install
 
 # 启动示例
-npm run example
+npm run run:example
+
+# 启动示例
+npm run run:template-explorer
+
+# 监听packages文件变更
+npm run watch
 
 # 项目构建
 npm run build

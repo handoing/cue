@@ -5,13 +5,15 @@
   ],
   "scripts": {
     "start": "npm run build && webpack serve --config example/webpack.config.js",
-    "example": "npm run build && webpack serve --config example/webpack.config.js",
+    "run:example": "npm run build && webpack serve --config example/webpack.config.js",
+    "run:template-explorer": "npm run build && node scripts/runTemplateExplorer.js",
     "watch": "node scripts/watch.js",
     "build": "node scripts/build.js",
     "lint": "eslint --format codeframe --ext .js packages/*/src/** packages/*/index.js",
     "lint:fix": "eslint --fix --ext .js packages/*/src/** packages/*/index.js",
     "test": "npm run build && jest",
-    "postinstall": "lerna bootstrap"
+    "postinstall": "lerna bootstrap",
+    "clean": "lerna clean"
   },
   "engines": {
     "node": ">=12.16.1"

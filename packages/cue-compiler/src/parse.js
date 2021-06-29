@@ -93,6 +93,7 @@ const NodeTypes = {
   COMMENT: 'COMMENT',
   SIMPLE_EXPRESSION: 'SIMPLE_EXPRESSION',
   INTERPOLATION: 'INTERPOLATION',
+  CONTROL: 'CONTROL',
   ATTRIBUTE: 'ATTRIBUTE',
   DIRECTIVE: 'DIRECTIVE',
 
@@ -166,7 +167,14 @@ function parseChildren(context, mode, ancestors) {
     let node;
     if (mode === TextModes.DATA || mode === TextModes.RCDATA) {
       if (!context.inVPre && startsWith(s, context.options.delimiters[0])) {
-        node = parseInterpolation(context, mode);
+        if (
+          startsWith(s, `${context.options.delimiters[0]}#`) ||
+          startsWith(s, `${context.options.delimiters[0]}/`)
+        ) {
+          node = parseControlStatement(context, mode);
+        } else {
+          node = parseInterpolation(context, mode);
+        }
       } else if (mode === TextModes.DATA && s[0] === '<') {
         if (s[1] === '/') {
           if (s[2] === '>') {
@@ -403,6 +411,45 @@ function parseInterpolation(context, mode) {
 
   return {
     type: NodeTypes.INTERPOLATION,
+    content: {
+      type: NodeTypes.SIMPLE_EXPRESSION,
+      isStatic: false,
+      constType: ConstantTypes.NOT_CONSTANT,
+      content,
+      loc: getSelection(context, innerStart, innerEnd),
+    },
+    loc: getSelection(context, start),
+  };
+}
+
+function parseControlStatement(context, mode) {
+  const [open, close] = context.options.delimiters;
+  const openLength = open.length + 1;
+
+  const closeIndex = context.source.indexOf(close, openLength);
+  if (closeIndex === -1) {
+    emitError(context, ErrorCodes.X_MISSING_INTERPOLATION_END);
+    return undefined;
+  }
+
+  const start = getCursor(context);
+  advanceBy(context, openLength);
+  const innerStart = getCursor(context);
+  const innerEnd = getCursor(context);
+  const rawContentLength = closeIndex - openLength;
+  const rawContent = context.source.slice(0, rawContentLength);
+  const preTrimContent = parseTextData(context, rawContentLength, mode);
+  const content = preTrimContent.trim();
+  const startOffset = preTrimContent.indexOf(content);
+  if (startOffset > 0) {
+    advancePositionWithMutation(innerStart, rawContent, startOffset);
+  }
+  const endOffset = rawContentLength - (preTrimContent.length - content.length - startOffset);
+  advancePositionWithMutation(innerEnd, rawContent, endOffset);
+  advanceBy(context, close.length);
+
+  return {
+    type: NodeTypes.CONTROL,
     content: {
       type: NodeTypes.SIMPLE_EXPRESSION,
       isStatic: false,

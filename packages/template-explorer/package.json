@@ -21,7 +21,7 @@
     "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
-    "cue-compiler": "^1.0.0",
+    "cue-compiler": "workspace:^1.0.0",
     "monaco-editor": "^0.25.2",
     "pretty-js": "^0.2.2"
   }

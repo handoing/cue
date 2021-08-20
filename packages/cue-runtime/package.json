@@ -19,7 +19,7 @@
     "url": "https://github.com/handoing/cue/issues"
   },
   "dependencies": {
-    "cue-shared": "^1.0.0",
+    "cue-shared": "workspace:^1.0.0",
     "snabbdom": "^2.1.0"
   },
   "devDependencies": {

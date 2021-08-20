@@ -19,8 +19,8 @@
     "url": "https://github.com/handoing/cue/issues"
   },
   "dependencies": {
-    "cue-compiler": "^1.0.0",
-    "cue-runtime": "^1.0.0"
+    "cue-compiler": "workspace:^1.0.0",
+    "cue-runtime": "workspace:^1.0.0"
   },
   "devDependencies": {
     "esbuild": "^0.8.42"

@@ -12,8 +12,6 @@
     "lint": "eslint --format codeframe --ext .js packages/*/src/** packages/*/index.js",
     "lint:fix": "eslint --fix --ext .js packages/*/src/** packages/*/index.js",
     "test": "npm run build && jest",
-    "postinstall": "lerna bootstrap",
-    "clean": "lerna clean",
     "contributors:init": "all-contributors init",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
@@ -38,7 +36,6 @@
     "html-webpack-plugin": "^4.5.1",
     "husky": "^4.3.8",
     "jest": "^26.6.3",
-    "lerna": "^3.22.1",
     "prettier": "^2.2.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.15.0",

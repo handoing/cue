@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   data: {
     toggle: true,
     img: 'https://hao8.qhimg.com/t01c413c779df7eeecb.jpg',

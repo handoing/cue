@@ -4,9 +4,9 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "pnpm build:all && webpack serve --config example/webpack.config.js",
+    "start": "pnpm run:example",
     "build:all": "pnpm build --filter 'cue*'",
-    "run:example": "pnpm build:all && webpack serve --config example/webpack.config.js",
+    "run:example": "pnpm build:all && vite --config example/vite.config.js",
     "run:template-explorer": "pnpm build:all && pnpm dev --filter 'template-explorer'",
     "test": "pnpm build:all && jest",
     "lint": "eslint --format codeframe --ext .js packages/*/src/** packages/*/index.js",
@@ -23,21 +23,16 @@
       "pre-commit": "npm run lint"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "vite": "^2.5.3"
+  },
   "devDependencies": {
     "all-contributors-cli": "^6.20.0",
-    "css-loader": "^5.0.1",
-    "esbuild": "^0.8.42",
     "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "html-webpack-plugin": "^4.5.1",
     "husky": "^4.3.8",
     "jest": "^26.6.3",
-    "prettier": "^2.2.1",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.15.0",
-    "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.1"
+    "prettier": "^2.2.1"
   }
 }

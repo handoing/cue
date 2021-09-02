@@ -1,6 +1,6 @@
 import * as monaco from 'monaco-editor/esm/vs/editor/editor.main.js';
 import prettyJs from 'pretty-js';
-import { tokenizer, parser, generate, generateSnabb } from 'cue-compiler';
+import { tokenizer, tokenizerV2, parser, generate, generateSnabb } from 'cue-compiler';
 import theme from './theme';
 
 monaco.editor.defineTheme('my-theme', theme);
@@ -39,7 +39,7 @@ editor.onDidChangeModelContent(debounce(reCompile));
 reCompile();
 
 function compile(source) {
-  const tokens = tokenizer(source);
+  const tokens = tokenizerV2(source);
   const ast = parser(tokens);
   const code = generateSnabb(ast);
   return { ast, code };

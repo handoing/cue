@@ -18,8 +18,8 @@
     "url": "git+https://github.com/handoing/cue.git"
   },
   "scripts": {
-    "build": "esbuild index.js --bundle --format=cjs --minify --outfile=./dist/cue-shared.js",
-    "watch": "esbuild index.js --bundle --format=cjs --watch --outfile=./dist/cue-shared.js",
+    "build": "esbuild index.js --bundle --format=esm --minify --outfile=./dist/cue-shared.js",
+    "watch": "esbuild index.js --bundle --format=esm --watch --outfile=./dist/cue-shared.js",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {

@@ -4,20 +4,19 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "npm run build && webpack serve --config example/webpack.config.js",
-    "run:example": "npm run build && webpack serve --config example/webpack.config.js",
-    "run:template-explorer": "npm run build && node scripts/runTemplateExplorer.js",
-    "watch": "node scripts/watch.js",
-    "build": "node scripts/build.js",
+    "start": "pnpm build:all && webpack serve --config example/webpack.config.js",
+    "build:all": "pnpm build --filter 'cue*'",
+    "run:example": "pnpm build:all && webpack serve --config example/webpack.config.js",
+    "run:template-explorer": "pnpm build:all && pnpm dev --filter 'template-explorer'",
+    "test": "pnpm build:all && jest",
     "lint": "eslint --format codeframe --ext .js packages/*/src/** packages/*/index.js",
     "lint:fix": "eslint --fix --ext .js packages/*/src/** packages/*/index.js",
-    "test": "npm run build && jest",
     "contributors:init": "all-contributors init",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },
   "engines": {
-    "node": ">=12.16.1"
+    "node": ">=14.17.5"
   },
   "husky": {
     "hooks": {

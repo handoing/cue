@@ -10,19 +10,17 @@
     "url": "git+https://github.com/handoing/cue.git"
   },
   "scripts": {
-    "dev:parcel": "parcel index.html",
-    "build:parcel": "parcel build index.html",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "bugs": {
     "url": "https://github.com/handoing/cue/issues"
   },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.5"
-  },
   "dependencies": {
     "cue-compiler": "workspace:^1.0.0",
     "monaco-editor": "^0.25.2",
-    "pretty-js": "^0.2.2"
+    "pretty-js": "^0.2.2",
+    "vite": "^2.5.3"
   }
 }

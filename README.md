@@ -16,23 +16,20 @@ Lightweight high performance MVVM framework（[benchmarks](https://github.com/ha
 ```bash
 git clone https://github.com/handoing/cue
 cd cue/
-# 安装依赖
-npm install
+# 安装依赖 (项目使用pnpm进行包管理，请先安装pnpm，详见：https://pnpm.io/)
+pnpm install
 
 # 启动示例
-npm run run:example
+pnpm run:example
 
 # 启动示例
-npm run run:template-explorer
-
-# 监听packages文件变更
-npm run watch
+pnpm run:template-explorer
 
 # 项目构建
-npm run build
+pnpm build:all
 
 # 测试
-npm run test
+pnpm test
 ```
 
 ## Usage
@@ -45,17 +42,17 @@ tpl:
 >
   <img class="image" on-click={{this.onChange($event)}} src="{{img}}"/>
   <div class="toggle">toggle {{toggle}}</div>
-  <span class="icon"></span>
 </div>
 ```
 
 js:
 
 ```js
-module.exports = {
+export default {
   data: {
     toggle: true,
-    img: 'https://hao8.qhimg.com/t01c413c779df7eeecb.jpg'
+    img: 'https://avatars.githubusercontent.com/u/9876343',
+    nnnn: new Array(10).fill('')
   },
   created() {
     console.log('created');

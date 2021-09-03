@@ -6,9 +6,10 @@
   "scripts": {
     "start": "pnpm run:example",
     "build:all": "pnpm build --filter 'cue*'",
+    "build:all:cjs": "pnpm build:cjs --filter 'cue*'",
     "run:example": "pnpm build:all && vite --config example/vite.config.js",
     "run:template-explorer": "pnpm build:all && pnpm dev --filter 'template-explorer'",
-    "test": "pnpm build:all && jest",
+    "test": "pnpm build:all:cjs && jest",
     "lint": "eslint --format codeframe --ext .js packages/*/src/** packages/*/index.js",
     "lint:fix": "eslint --fix --ext .js packages/*/src/** packages/*/index.js",
     "contributors:init": "all-contributors init",

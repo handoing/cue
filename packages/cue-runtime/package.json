@@ -12,8 +12,8 @@
   },
   "scripts": {
     "build": "esbuild index.js --bundle --format=esm --minify --outfile=./dist/cue-runtime.js",
-    "watch": "esbuild index.js --bundle --format=esm --watch --outfile=./dist/cue-runtime.js",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build:cjs": "esbuild index.js --bundle --format=cjs --minify --outfile=./dist/cue-runtime.js",
+    "watch": "esbuild index.js --bundle --format=esm --watch --outfile=./dist/cue-runtime.js"
   },
   "bugs": {
     "url": "https://github.com/handoing/cue/issues"

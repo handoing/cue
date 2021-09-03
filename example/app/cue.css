@@ -2,6 +2,10 @@
   color: blue;
 }
 
+.main .image {
+  width: 100px;
+}
+
 .main .image:hover {
   cursor: pointer;
 }

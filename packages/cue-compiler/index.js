@@ -18,7 +18,7 @@ function compileV2(template) {
   const tokens = tokenizerV2(template);
   const ast = parser(tokens);
   transform(ast);
-  const code = generate(ast);
+  const code = generateSnabb(ast);
   const dynamicFunction = new Function(`return ${code}`);
   return dynamicFunction();
 }
